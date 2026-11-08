@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Barber Shop | Rawalpindi</title><meta name="description" content="Barber shop in Shalley Valley, Rawalpindi. Haircuts, beard trims and classic shaves.">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MCA0MCI+PGNsaXBQYXRoIGlkPSJjIj48cmVjdCB4PSIxMiIgeT0iMiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjM2IiByeD0iOCIvPjwvY2xpcFBhdGg+PHJlY3QgeD0iMTIiIHk9IjIiIHdpZHRoPSIxNiIgaGVpZ2h0PSIzNiIgcng9IjgiIGZpbGw9IiNmZmYiLz48ZyBjbGlwLXBhdGg9InVybCgjYykiPjxwYXRoIGQ9Ik04IDhsMjQgLTh2OGwtMjQgOHpNOCAyNGwyNCAtOHY4bC0yNCA4ek04IDQwbDI0IC04djhsLTI0IDh6IiBmaWxsPSIjQzgxMDJFIi8+PHBhdGggZD0iTTggMTZsMjQgLTh2OGwtMjQgOHpNOCAzMmwyNCAtOHY4bC0yNCA4eiIgZmlsbD0iIzFGNEU5QyIvPjwvZz48cmVjdCB4PSIxMiIgeT0iMiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjM2IiByeD0iOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEuNSIvPjwvc3ZnPgo=">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>:root{--ink:#101B2D;--red:#C8102E;--blue:#1F4E9C;--paper:#FAFAF9;--steel:#E4E8EE;--muted:#5B6678;--r:6px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:'Barlow Condensed',Impact,sans-serif;line-height:1.05;letter-spacing:.01em}
+h1{font-size:clamp(2.8rem,8vw,5.5rem)}h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:.6rem}h3{font-size:1.5rem;margin-bottom:.3rem}
+a{color:inherit}
+.wrap{max-width:1120px;margin:auto;padding:0 20px}
+.pole{height:8px;background:repeating-linear-gradient(135deg,var(--red) 0 14px,#fff 14px 28px,var(--blue) 28px 42px,#fff 42px 56px)}
+header{background:var(--ink);color:#fff;position:sticky;top:0;z-index:20}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:1.7rem;font-weight:700}
+.brand img{height:38px}
+nav ul{display:flex;gap:6px;list-style:none;padding:0}
+nav a{display:block;padding:8px 14px;text-decoration:none;border-radius:var(--r);font-weight:600}
+nav a:hover,nav a.on{background:rgba(255,255,255,.12)}
+nav a.cta{background:var(--red)}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.8rem;cursor:pointer}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:13px 26px;border-radius:var(--r);text-decoration:none;font-weight:700;border:0;font-size:1rem;cursor:pointer;font-family:inherit}
+.btn:hover{background:#a50d26}.btn.alt{background:transparent;border:2px solid #fff}.btn.alt:hover{background:#fff;color:var(--ink)}
+.btn.dark{background:var(--ink)}
+:focus-visible{outline:3px solid #f5b400;outline-offset:2px}
+.slider{position:relative;overflow:hidden;background:var(--ink);color:#fff}
+.slide{display:none;min-height:min(78vh,600px);align-items:center;padding:70px 0}
+.slide.on{display:flex}
+.s1{background:linear-gradient(110deg,#101B2D 55%,#1F4E9C)}
+.s2{background:linear-gradient(110deg,#101B2D 55%,#6e0a1c)}
+.s3{background:linear-gradient(110deg,#101B2D 55%,#2b3a55)}
+.slide p{max-width:540px;margin:18px 0 28px;font-size:1.2rem;color:#d7deea}
+.slide .btn+.btn{margin-left:10px}
+.dots{position:absolute;bottom:20px;left:0;right:0;display:flex;justify-content:center;gap:10px}
+.dots button{width:12px;height:12px;border-radius:50%;border:2px solid #fff;background:transparent;cursor:pointer;padding:0}
+.dots button.on{background:#fff}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.35);color:#fff;border:0;width:44px;height:44px;font-size:1.5rem;cursor:pointer;border-radius:50%;z-index:2}
+.arrow.l{left:14px}.arrow.r{right:14px}
+.bigpole{position:absolute;right:8%;top:50%;transform:translateY(-50%);width:120px;height:80%;border-radius:60px;border:4px solid #fff;background:repeating-linear-gradient(160deg,var(--red) 0 30px,#fff 30px 60px,var(--blue) 60px 90px,#fff 90px 120px)}
+@media(max-width:800px){.bigpole{display:none}}
+section{padding:72px 0}
+.alt-bg{background:var(--steel)}
+.lead{color:var(--muted);max-width:620px;margin-bottom:34px}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:#fff;padding:26px;border-radius:var(--r);border-left:6px solid var(--red)}
+.card:nth-child(even){border-left-color:var(--blue)}
+.price{font-family:'Barlow Condensed',sans-serif;font-size:1.8rem;color:var(--red);font-weight:700}
+.pagehead{background:var(--ink);color:#fff;padding:64px 0 54px}
+.pagehead p{color:#c5cee0;margin-top:10px}
+.split{display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:center}
+.pic{aspect-ratio:4/3;border-radius:var(--r);background:repeating-linear-gradient(135deg,var(--red) 0 20px,#fff 20px 40px,var(--blue) 40px 60px,#fff 60px 80px);display:grid;place-items:center}
+.pic span{background:var(--ink);color:#fff;padding:10px 22px;font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;border-radius:var(--r)}
+.stats{display:flex;flex-wrap:wrap;gap:34px;margin-top:26px}
+.stats b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;color:var(--red)}
+.gal{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.gal div{aspect-ratio:1;border-radius:var(--r);display:grid;place-items:center;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;text-align:center;padding:10px}
+.hours{width:100%;border-collapse:collapse}.hours td{padding:9px 0;border-bottom:1px solid #c9d0db}.hours td:last-child{text-align:right;font-weight:600}
+form{background:#fff;padding:28px;border-radius:var(--r);display:grid;gap:16px}
+label{font-weight:600;display:grid;gap:6px;font-size:.95rem}
+input,select,textarea{font:inherit;padding:12px;border:1.5px solid #c9d0db;border-radius:var(--r);width:100%;background:#fff}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);outline:none}
+.row{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.msg{padding:12px;border-radius:var(--r);background:#e3f4e8;color:#14532d;display:none}
+.map iframe{width:100%;height:420px;border:0;border-radius:var(--r)}
+.info p{margin-bottom:14px}
+footer{background:var(--ink);color:#c5cee0;padding:46px 0 24px}
+.fgrid{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+footer h3{color:#fff}footer a{text-decoration:none}footer a:hover{text-decoration:underline}
+.copy{margin-top:30px;padding-top:18px;border-top:1px solid rgba(255,255,255,.15);font-size:.9rem}
+.wa{position:fixed;right:18px;bottom:18px;background:#1a8f46;color:#fff;padding:12px 18px;border-radius:30px;font-weight:700;text-decoration:none;z-index:30}
+@media(max-width:800px){
+ .burger{display:block}
+ nav ul{display:none;position:absolute;top:76px;left:0;right:0;background:var(--ink);flex-direction:column;padding:10px 20px 20px}
+ nav ul.open{display:flex}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.page{display:none}.page.show{display:block}</style></head><body>
+<header><div class="pole"></div><div class="wrap nav"><a class="brand" href="#home"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MCA0MCI+PGNsaXBQYXRoIGlkPSJjIj48cmVjdCB4PSIxMiIgeT0iMiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjM2IiByeD0iOCIvPjwvY2xpcFBhdGg+PHJlY3QgeD0iMTIiIHk9IjIiIHdpZHRoPSIxNiIgaGVpZ2h0PSIzNiIgcng9IjgiIGZpbGw9IiNmZmYiLz48ZyBjbGlwLXBhdGg9InVybCgjYykiPjxwYXRoIGQ9Ik04IDhsMjQgLTh2OGwtMjQgOHpNOCAyNGwyNCAtOHY4bC0yNCA4ek04IDQwbDI0IC04djhsLTI0IDh6IiBmaWxsPSIjQzgxMDJFIi8+PHBhdGggZD0iTTggMTZsMjQgLTh2OGwtMjQgOHpNOCAzMmwyNCAtOHY4bC0yNCA4eiIgZmlsbD0iIzFGNEU5QyIvPjwvZz48cmVjdCB4PSIxMiIgeT0iMiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjM2IiByeD0iOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEuNSIvPjwvc3ZnPgo=" alt="">Barber Shop</a>
+<button class="burger" aria-label="Menu" aria-expanded="false">&#9776;</button><nav aria-label="Main"><ul><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#contact">Contact Us</a></li><li><a class="cta" href="#booking">Book now</a></li></ul></nav></div></header>
+<main class="page" id="p-home">
+<div class="slider" aria-roledescription="carousel"><div class="bigpole"></div>
+<div class="slide s1 on"><div class="wrap"><h1>Sharp cuts.<br>Clean lines.</h1><p>Walk in tired, walk out looking your best. Skilled barbers, fresh towels and no rush.</p><a class="btn" href="#booking">Book a seat</a><a class="btn alt" href="#services">See services</a></div></div>
+<div class="slide s2"><div class="wrap"><h1>The classic shave</h1><p>Hot towel, rich lather and a steady razor. Still the best 20 minutes of your week.</p><a class="btn" href="#booking">Book a shave</a></div></div>
+<div class="slide s3"><div class="wrap"><h1>Beards, done right</h1><p>Trim, shape and line-up that suits your face and keeps its form for days.</p><a class="btn" href="#contact">Find the shop</a></div></div>
+<button class="arrow l" aria-label="Previous slide">&#8249;</button><button class="arrow r" aria-label="Next slide">&#8250;</button><div class="dots"></div></div>
+<section><div class="wrap"><h2>What we do</h2><p class="lead">Simple prices, no surprises. Tell us what you want and we will get it right.</p><div class="grid"><div class="card"><h3>Haircut</h3><p>Scissor or machine cut, finished with a wash and style.</p><p class="price">Rs. 500</p></div><div class="card"><h3>Beard trim and shape</h3><p>Lined up and shaped to suit your face.</p><p class="price">Rs. 300</p></div><div class="card"><h3>Classic shave</h3><p>Hot towel, lather and a smooth razor finish.</p><p class="price">Rs. 400</p></div></div><p style="margin-top:26px"><a class="btn dark" href="#services">All services and prices</a></p></div></section>
+<section class="alt-bg"><div class="wrap split"><div><h2>Open six days a week</h2><table class="hours"><tr><td>Monday to Saturday</td><td>10:00 am – 10:00 pm</td></tr><tr><td>Sunday</td><td>12:00 pm – 8:00 pm</td></tr></table><p style="margin-top:18px">Walk-ins are welcome. Book ahead for weekends and before Eid.</p><p style="margin-top:18px"><a class="btn" href="#booking">Book an appointment</a></p></div><div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106351.85979232438!2d72.86941234335936!3d33.592442800000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df95d081dedc97%3A0x627456a8e19b1d73!2sAsif%20Hair%20Saloon!5e0!3m2!1sen!2s!4v1794131828796!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Barber Shop location map"></iframe></div></div></section>
+</main>
+<main class="page" id="p-about">
+<div class="pagehead"><div class="wrap"><h1>About us</h1><p>A neighbourhood barber shop built on good cuts and good conversation.</p></div></div><section><div class="wrap split"><div class="pic"><span>Est. in Shalley Valley</span></div><div><h2>Your local barber</h2><p>We opened this shop with one idea: a haircut should be careful, clean and on time. Our barbers have years of experience with classic cuts, modern fades and traditional shaves.</p><p style="margin-top:12px">Every tool is sanitised between customers and every customer is asked what they want before the first snip. If you are not happy, we fix it for free.</p><div class="stats"><div><b>10+</b>years of experience</div><div><b>5,000+</b>happy customers</div><div><b>6</b>days a week</div></div></div></div></section>
+<section class="alt-bg"><div class="wrap"><h2>Why people come back</h2><div class="grid"><div class="card"><h3>Clean tools</h3><p>Sanitised blades and fresh towels for each customer.</p></div><div class="card"><h3>Skilled barbers</h3><p>Fades, scissor cuts, beard work and classic shaves.</p></div><div class="card"><h3>Fair prices</h3><p>Clear rates posted in the shop and on this site.</p></div></div></div></section>
+</main>
+<main class="page" id="p-services">
+<div class="pagehead"><div class="wrap"><h1>Services</h1><p>Clear prices for every cut. Rates may change, so call to confirm.</p></div></div><section><div class="wrap"><div class="grid"><div class="card"><h3>Haircut</h3><p>Scissor or machine cut, finished with a wash and style.</p><p class="price">Rs. 500</p></div><div class="card"><h3>Beard trim and shape</h3><p>Lined up and shaped to suit your face.</p><p class="price">Rs. 300</p></div><div class="card"><h3>Classic shave</h3><p>Hot towel, lather and a smooth razor finish.</p><p class="price">Rs. 400</p></div><div class="card"><h3>Hair colour</h3><p>Black, brown or fashion shades, applied evenly.</p><p class="price">Rs. 800</p></div><div class="card"><h3>Facial and cleanup</h3><p>Deep clean to refresh tired skin.</p><p class="price">Rs. 1,000</p></div><div class="card"><h3>Kids haircut</h3><p>Patient, quick and tidy for boys under 12.</p><p class="price">Rs. 350</p></div></div><p style="margin-top:30px"><a class="btn" href="#booking">Book an appointment</a></p></div></section>
+</main>
+<main class="page" id="p-gallery">
+<div class="pagehead"><div class="wrap"><h1>Gallery</h1><p>A look at the work. Replace these tiles with your own photos from assets/img.</p></div></div><section><div class="wrap"><div class="gal"><div style="background:#1F4E9C">Classic fade</div><div style="background:#C8102E">Beard line-up</div><div style="background:#101B2D">Hot towel shave</div><div style="background:#2b3a55">Scissor cut</div><div style="background:#6e0a1c">Colour</div><div style="background:#173a73">Kids cut</div><div style="background:#a50d26">Taper</div><div style="background:#3a4a68">Styling</div></div></div></section>
+</main>
+<main class="page" id="p-contact">
+<div class="pagehead"><div class="wrap"><h1>Contact us</h1><p>Visit, call or send a message. We reply the same day.</p></div></div><section><div class="wrap split" style="align-items:start"><div class="info"><h2>Find the shop</h2><p><b>Address</b><br>Street # 14 Dhoke Banaras Rd, Shalley Valley, Rawalpindi, 46000, Pakistan</p><p><b>Phone</b><br><a href="tel:+923015790678">03015790678</a></p><p><b>Hours</b><br>Mon–Sat 10 am – 10 pm<br>Sun 12 pm – 8 pm</p></div>
+<form data-wa="New message from the website" aria-label="Contact form"><h3>Send a message</h3><div class="row"><label>Your name<input name="Name" required></label><label>Phone<input name="Phone" type="tel" required></label></div><label>Message<textarea name="Message" rows="4" required></textarea></label><button class="btn" type="submit">Send message</button><p class="msg" role="status"></p></form></div></section>
+<section class="alt-bg"><div class="wrap map"><h2>Map</h2><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106351.85979232438!2d72.86941234335936!3d33.592442800000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df95d081dedc97%3A0x627456a8e19b1d73!2sAsif%20Hair%20Saloon!5e0!3m2!1sen!2s!4v1794131828796!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Barber Shop location map"></iframe></div></section>
+</main>
+<main class="page" id="p-booking">
+<div class="pagehead"><div class="wrap"><h1>Book an appointment</h1><p>Pick a service and time. We confirm on WhatsApp.</p></div></div><section><div class="wrap" style="max-width:720px"><form data-wa="New booking request" aria-label="Booking form"><div class="row"><label>Your name<input name="Name" required></label><label>Phone<input name="Phone" type="tel" required></label></div>
+<label>Service<select name="Service" required><option value="">Choose a service</option><option>Haircut</option><option>Beard trim and shape</option><option>Classic shave</option><option>Hair colour</option><option>Facial and cleanup</option><option>Kids haircut</option></select></label>
+<div class="row"><label>Date<input name="Date" type="date" required></label><label>Time<input name="Time" type="time" min="10:00" max="22:00" required></label></div>
+<label>Notes (optional)<textarea name="Notes" rows="3"></textarea></label><button class="btn" type="submit">Request booking</button><p class="msg" role="status"></p></form></div></section>
+</main>
+<footer><div class="pole" style="margin:-46px 0 40px"></div><div class="wrap"><div class="fgrid">
+<div><h3>Barber Shop</h3><p>Classic cuts, clean shaves and honest service in Shalley Valley, Rawalpindi.</p></div>
+<div><h3>Visit</h3><p>Street # 14 Dhoke Banaras Rd, Shalley Valley, Rawalpindi, 46000, Pakistan</p></div>
+<div><h3>Call</h3><p><a href="tel:+923015790678">03015790678</a><br><a href="https://wa.me/923015790678">WhatsApp us</a></p></div>
+<div><h3>Pages</h3><p><a href="#home">Home</a> · <a href="#about">About</a> · <a href="#services">Services</a> · <a href="#gallery">Gallery</a> · <a href="#contact">Contact Us</a><br><a href="#booking">Book an appointment</a></p></div>
+</div><p class="copy">&copy; 2026 Barber Shop. All rights reserved.</p></div></footer>
+<a class="wa" href="https://wa.me/923015790678" aria-label="Chat on WhatsApp">WhatsApp</a>
+<script>const bg=document.querySelector('.burger'),ul=document.querySelector('nav ul');
+if(bg)bg.addEventListener('click',()=>{const o=ul.classList.toggle('open');bg.setAttribute('aria-expanded',o)});
+const slides=[...document.querySelectorAll('.slide')];
+if(slides.length){
+ const dots=document.querySelector('.dots');let i=0,t;
+ slides.forEach((_,n)=>{const b=document.createElement('button');b.setAttribute('aria-label','Slide '+(n+1));b.onclick=()=>go(n);dots.appendChild(b)});
+ function go(n){i=(n+slides.length)%slides.length;slides.forEach((s,k)=>{s.classList.toggle('on',k===i);dots.children[k].classList.toggle('on',k===i)});clearInterval(t);
+  if(!matchMedia('(prefers-reduced-motion:reduce)').matches)t=setInterval(()=>go(i+1),5500)}
+ document.querySelector('.arrow.l').onclick=()=>go(i-1);
+ document.querySelector('.arrow.r').onclick=()=>go(i+1);
+ go(0);
+}
+// Forms open WhatsApp with the details filled in (no server needed)
+document.querySelectorAll('form[data-wa]').forEach(f=>{
+ f.addEventListener('submit',e=>{
+  e.preventDefault();
+  let text=f.dataset.wa+'\n';
+  for(const [k,v] of new FormData(f).entries())if(v)text+=k+': '+v+'\n';
+  window.open('https://wa.me/923015790678?text='+encodeURIComponent(text),'_blank');
+  const m=f.querySelector('.msg');if(m){m.style.display='block';m.textContent='WhatsApp has opened with your details. Press send to confirm.'}
+  f.reset();
+ });
+});
+document.querySelectorAll('input[type=date]').forEach(d=>d.min=new Date().toISOString().split('T')[0]);
+
+// simple page routing: #home, #about, #services, #gallery, #contact, #booking
+function route(){const id=(location.hash||'#home').slice(1);const pg=document.getElementById('p-'+id)||document.getElementById('p-home');
+ document.querySelectorAll('.page').forEach(p=>p.classList.toggle('show',p===pg));
+ document.querySelectorAll('nav a').forEach(a=>{const on=a.getAttribute('href')==='#'+pg.id.slice(2);a.classList.toggle('on',on&&!a.classList.contains('cta'))});
+ if(ul)ul.classList.remove('open');scrollTo(0,0);document.title=document.title.split(' | ')[0]&&'Barber Shop | Rawalpindi'}
+addEventListener('hashchange',route);route();</script></body></html>
